@@ -1,0 +1,17 @@
+label {
+  display: block;
+  cursor: pointer;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 5px;
+}
+
+label.selected {
+  border-color: #000;
+}
+
+.letter {
+  margin-right: 5px;
+  font-weight: bold;
+}

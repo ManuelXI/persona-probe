@@ -1,1 +1,11 @@
-<p>test-page works!</p>
+<div *ngFor="let question of questions">
+  <h3>{{ question.text }}</h3>
+  <div *ngFor="let answer of question.answers; let i = index">
+    <label [class.selected]="question.selectedAnswerId === answer.id" (click)="selectAnswer(question, answer.id)">
+      <span class="letter">{{ getLetter(i) }}</span>
+      {{ answer.text }}
+    </label>
+  </div>
+</div>
+<button [disabled]="isSubmitDisabled" (click)="finishTest()">Finish Test</button>
+
