@@ -10,7 +10,7 @@
   --clr-neutral-200: hsl(0, 0%, 97%);
   --clr-neutral-100: hsl(0, 0%, 100%);
 
-  --ff-primary: "Be Vietnam Pro", sans-serif;
+  --ff-primary: 'Cabin', sans-serif;
 
   --ff-body: var(--ff-primary);
   --ff-accent: var(--ff-primary);
@@ -31,7 +31,7 @@
   --fs-primary-heading: var(--fs-800);
   --fs-secondary-heading: var(--fs-700);
   --fs-nav: var(--fs-500);
-  --fs-button: var(--fs-300);
+  --fs-button: var(--fs-400);
 
   --size-100: 0.25rem;
   --size-200: 0.5rem;
@@ -160,7 +160,7 @@ p[data-width="wide"] {
   line-height: 1;
   color: var(--clr-neutral-100);
   background-color: var(--clr-accent-400);
-  box-shadow: 0 1.125em 1em -1em var(--clr-accent-500);
+  /* box-shadow: 0 1.125em 1em -1em var(--clr-accent-500); */
   transition: all 200ms ease-in-out;
 }
 
@@ -316,6 +316,9 @@ p[data-width="wide"] {
 }
 .fs-600 {
   font-size: var(--fs-600);
+}
+.fs-800 {
+  font-size: var(--fs-800);
 }
 
 .padding-block-900 {
