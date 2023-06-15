@@ -30,8 +30,6 @@ export class EvaluationService {
   constructor() {}
 
   evaluatePersonalityTrait(questions: Question[]): PersonalityType {
-    // let score = 0;
-
     const extrovertThreshold = Math.floor(questions.length / 2);
 
     const extrovertCount = questions.reduce((count, question) => {

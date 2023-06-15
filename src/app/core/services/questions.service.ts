@@ -37,21 +37,20 @@ export class QuestionsService {
       ],
       selectedAnswerId: null,
     },
-    {
-      id: 4,
-      text: 'In social gatherings, do you prefer being in the center of attention or observe from the sidelines?',
-      answers: [
-        { id: 1, text: 'Prefer observing from the sidelines' },
-        { id: 2, text: 'Enjoy being in the center of attention' },
-      ],
-      selectedAnswerId: null,
-    },
-    // Add more questions here as needed
+    // {
+    //   id: 4,
+    //   text: 'In social gatherings, do you prefer being in the center of attention or observe from the sidelines?',
+    //   answers: [
+    //     { id: 1, text: 'Prefer observing from the sidelines' },
+    //     { id: 2, text: 'Enjoy being in the center of attention' },
+    //   ],
+    //   selectedAnswerId: null,
+    // },
   ];
 
   constructor() {}
 
-  getQuestions(): Observable<Question[]> {
-    return of(this.questions);
+  getQuestions(): Question[] {
+    return this.questions;
   }
 }

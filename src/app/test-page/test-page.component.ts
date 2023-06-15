@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { QuestionsService } from '../core/services/questions.service';
 import { EvaluationService } from '../core/services/evaluation.service';
-import { Question } from '../core/types/models';
+import { PersonalityType, Question } from '../core/types/models';
 import { Router } from '@angular/router';
 
 @Component({
@@ -15,7 +15,8 @@ export class TestPageComponent implements OnInit {
 
   constructor(
     private router: Router,
-    private questionsService: QuestionsService
+    private questionsService: QuestionsService,
+    private evaluationService: EvaluationService
   ) {}
 
   ngOnInit(): void {
@@ -23,14 +24,7 @@ export class TestPageComponent implements OnInit {
   }
 
   getQuestions(): void {
-    this.questionsService.getQuestions().subscribe(
-      (questions: Question[]) => {
-        this.questions = questions;
-      },
-      (error: any) => {
-        console.error('Error retrieving questions:', error);
-      }
-    );
+    this.questions = this.questionsService.getQuestions();
   }
 
   selectAnswer(question: Question, answerId: number): void {
@@ -45,8 +39,13 @@ export class TestPageComponent implements OnInit {
   }
 
   finishTest(): void {
-    // Handle the test completion logic here
-    // this.router.navigate(['/results']);
+    this.router.navigate(['/results'], {
+      state: {
+        personalityType: this.evaluationService.evaluatePersonalityTrait(
+          this.questions
+        ),
+      },
+    });
   }
 
   getLetter(index: number): string {
