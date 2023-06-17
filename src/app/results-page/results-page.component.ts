@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
 import { PersonalityType } from '../core/types/models';
-import { TestPageComponent } from '../test-page/test-page.component';
 
 @Component({
   selector: 'app-results-page',
@@ -10,10 +8,11 @@ import { TestPageComponent } from '../test-page/test-page.component';
 })
 export class ResultsPageComponent implements OnInit {
   personalityType: PersonalityType | undefined;
-  constructor(private route: ActivatedRoute) {}
+  constructor() {}
 
   ngOnInit(): void {
-    this.personalityType = history.state.personalityType;
-    // this.personalityType = undefined;
+    if (history.state && history.state.personalityType) {
+      this.personalityType = history.state.personalityType;
+    }
   }
 }

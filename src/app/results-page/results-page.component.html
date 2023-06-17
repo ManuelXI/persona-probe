@@ -20,7 +20,7 @@
 
       <h4 class="" >Weaknesses:</h4>
       <ul>
-        <li *ngFor="let weakness of personalityType.weaknesses" class="weakneess" >
+        <li *ngFor="let weakness of personalityType.weaknesses" class="weakness" >
           {{ weakness }}
         </li>
       </ul>
@@ -36,6 +36,6 @@
 
   <ng-container *ngIf="!personalityType">
     <p>No results available!.</p>
-    <button class="button margin-top-400 " routerLink="/test">Take a Test</button>
+    <button class="button margin-top-400 " routerLink="/test">Take a Personality Test</button>
   </ng-container>
 </section>
