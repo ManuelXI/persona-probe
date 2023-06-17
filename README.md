@@ -1,27 +1,36 @@
 # PersonaProbe
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.2.
+PersonaProbe is a web application for conducting personality assessments and providing personalized results based on user responses. It allows users to answer a set of questions and evaluates their personality traits to provide insightful information about their characteristics, strengths, weaknesses, and potential career paths.
 
-## Development server
+## Features
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+- Dynamic Assessment: Users can take a personality assessment by answering a series of questions.
+- Personality Evaluation: The application evaluates user responses to determine their personality type.
+- Detailed Results: Users receive detailed information about their personality type, including a description, additional information, strengths, weaknesses, and potential careers.
+- Seamless Navigation: Users can easily navigate between the assessment, results, and retake the test if desired.
 
-## Code scaffolding
+## Technologies Used
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Angular: A powerful JavaScript framework used for building the frontend of the application.
+- TypeScript: A statically-typed superset of JavaScript used for writing clean and scalable code.
+- HTML: The standard markup language for creating the structure of web pages.
+- CSS: A styling language used to customize the appearance of web pages.
+- Angular Router: A module that provides seamless navigation between different views of the application.
+- Angular Testing: A testing framework used for writing unit tests to ensure code quality and functionality.
 
-## Build
+## Getting Started
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+To get started with PersonaProbe, follow these steps:
 
-## Running unit tests
+1. Clone the repository: `git clone <repository-url>`
+2. Install the dependencies: `npm install`
+3. Start the development server: `ng serve`
+4. Open your browser and navigate to `http://localhost:4200` to access the application.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Usage
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+1. On the landing page, read the instructions and click the "Start Assessment" button.
+2. Answer each question by selecting the appropriate option.
+3. Once all questions are answered, click the "Finish Test" button to submit the assessment.
+4. The results page will display your personality type, along with detailed information about your characteristics, strengths, weaknesses, and potential careers.
+5. To retake the assessment, click the "Take Another Test" button.
