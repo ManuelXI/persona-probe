@@ -1,0 +1,43 @@
+section {
+  padding: var(--size-300);
+}
+
+h2 {
+  text-align: center;
+}
+
+img {
+  width: 90%;
+  height: auto;
+}
+
+.info-block {
+  border: 2px dotted var(--clr-neutral-500);
+  border-radius: var(--size-400);
+  padding-inline: var(--size-300);
+  padding-block: var(--size-300);
+  color: var(--clr-neutral-900);
+  background-color: var(--clr-green-200);
+  margin-block: var(--size-300);
+}
+
+.instructions-block {
+  background-color: var(--clr-yellow-200);
+}
+
+h4 {
+  font-size: var(--fs-600);
+  font-weight: var(--fw-semi-bold);
+  margin-top: var(--size-300);
+  margin-bottom: var(--size-100);
+}
+
+span:has(.button) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ul {
+  padding-inline-start: var(--size-300);
+}
