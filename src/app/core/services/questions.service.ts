@@ -51,6 +51,9 @@ export class QuestionsService {
   constructor() {}
 
   getQuestions(): Question[] {
+    this.questions.forEach((question) => {
+      question.selectedAnswerId = null;
+    });
     return this.questions;
   }
 }

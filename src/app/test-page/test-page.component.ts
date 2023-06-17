@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { QuestionsService } from '../core/services/questions.service';
 import { EvaluationService } from '../core/services/evaluation.service';
-import { PersonalityType, Question } from '../core/types/models';
+import { Question } from '../core/types/models';
 import { Router } from '@angular/router';
 
 @Component({
@@ -24,7 +24,8 @@ export class TestPageComponent implements OnInit {
   }
 
   getQuestions(): void {
-    this.questions = this.questionsService.getQuestions();
+    this.questions = [...this.questionsService.getQuestions()];
+    this.checkSubmitButtonState();
   }
 
   selectAnswer(question: Question, answerId: number): void {

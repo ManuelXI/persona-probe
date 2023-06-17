@@ -1,11 +1,19 @@
-<div *ngFor="let question of questions">
-  <h3>{{ question.text }}</h3>
-  <div *ngFor="let answer of question.answers; let i = index">
-    <label [class.selected]="question.selectedAnswerId === answer.id" (click)="selectAnswer(question, answer.id)">
-      <span class="letter">{{ getLetter(i) }}</span>
-      {{ answer.text }}
-    </label>
+<section class="container">
+  <div *ngFor="let question of questions">
+    <h3 class="question-text" >{{question.id + ". " + question.text }}</h3>
+    <div class="answer-block" *ngFor="let answer of question.answers; let i = index">
+      <label
+        [class.selected]="question.selectedAnswerId === answer.id"
+        (click)="selectAnswer(question, answer.id)"
+      >
+        <span class="letter">{{ getLetter(i) }}</span>
+        {{ answer.text }}
+      </label>
+    </div>
   </div>
-</div>
-<button [disabled]="isSubmitDisabled" (click)="finishTest()">Finish Test</button>
-
+  <span>
+    <button class="button" [disabled]="isSubmitDisabled" (click)="finishTest()">
+      Submit
+    </button>
+  </span>
+</section>
