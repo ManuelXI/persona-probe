@@ -1,27 +1,41 @@
-<ng-container *ngIf="personalityType" >
-  <h2>Results</h2>
-<div>
-  <h3 class="fs-700 fw-semi-bold" >Personality Type: {{ personalityType.type }}</h3>
-  <p>{{ personalityType.description }}</p>
-  <p>{{ personalityType.additionalInfo }}</p>
+<section class="container">
+  <ng-container *ngIf="personalityType">
+    <!-- <h2>Results</h2> -->
+    <div>
+      <h3>You're an</h3>
+      <h2 class="fs-800 fw-semi-bold margin-bottom-200">
+        {{ personalityType.type }}
+      </h2>
+      <p>{{ personalityType.description }}</p>
 
-  <h4>Strengths:</h4>
-  <ul>
-    <li *ngFor="let strength of personalityType.strengths">{{ strength }}</li>
-  </ul>
+      <h4>Additional Info:</h4>
+      <p>{{ personalityType.additionalInfo }}</p>
 
-  <h4>Weaknesses:</h4>
-  <ul>
-    <li *ngFor="let weakness of personalityType.weaknesses">{{ weakness }}</li>
-  </ul>
+      <h4>Strengths:</h4>
+      <ul>
+        <li *ngFor="let strength of personalityType.strengths" class="strength" >
+          {{ strength }}
+        </li>
+      </ul>
 
-  <h4>Potential Careers:</h4>
-  <ul>
-    <li *ngFor="let career of personalityType.careers">{{ career }}</li>
-  </ul>
-</div>
-</ng-container>
-<ng-container *ngIf="!personalityType" >
-  <p>No results available.</p>
-  <button class="button" routerLink="/test">Take the Test</button>
-</ng-container>
+      <h4 class="" >Weaknesses:</h4>
+      <ul>
+        <li *ngFor="let weakness of personalityType.weaknesses" class="weakneess" >
+          {{ weakness }}
+        </li>
+      </ul>
+
+      <h4>Potential Careers:</h4>
+      <ul>
+        <li *ngFor="let career of personalityType.careers" class="career" >{{ career }}</li>
+      </ul>
+    </div>
+    <button class="button margin-top-600 " routerLink="/test">Take another Test</button>
+  </ng-container>
+
+
+  <ng-container *ngIf="!personalityType">
+    <p>No results available!.</p>
+    <button class="button margin-top-400 " routerLink="/test">Take a Test</button>
+  </ng-container>
+</section>

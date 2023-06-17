@@ -1,0 +1,49 @@
+section {
+  padding-block: var(--size-400);
+  text-align: center;
+}
+
+p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h3 {
+  margin-bottom: -0.5rem;
+}
+
+h4 {
+  font-size: var(--fs-600);
+  font-weight: var(--fw-semi-bold);
+  margin-top: var(--size-300);
+  margin-bottom: var(--size-100);
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: var(--size-300);
+}
+
+li {
+  border: 2px dotted var(--clr-neutral-500);
+  /* border-style: dotted; */
+  border-radius: var(--size-400);
+  padding-inline: var(--size-400);
+  padding-block: var(--size-100);
+  color: var(--clr-neutral-900);
+}
+
+.strength {
+  background-color: var(--clr-green-200);
+}
+
+.weakneess {
+  background-color: var(--clr-red-200);
+}
+
+.career {
+  background-color: var(--clr-accent-200);
+}

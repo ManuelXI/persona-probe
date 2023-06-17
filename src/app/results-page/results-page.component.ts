@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { PersonalityType } from '../core/types/models';
+import { TestPageComponent } from '../test-page/test-page.component';
 
 @Component({
   selector: 'app-results-page',
@@ -13,5 +14,6 @@ export class ResultsPageComponent implements OnInit {
 
   ngOnInit(): void {
     this.personalityType = history.state.personalityType;
+    // this.personalityType = undefined;
   }
 }
