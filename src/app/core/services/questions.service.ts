@@ -37,15 +37,30 @@ export class QuestionsService {
       ],
       selectedAnswerId: null,
     },
-    // {
-    //   id: 4,
-    //   text: 'In social gatherings, do you prefer being in the center of attention or observe from the sidelines?',
-    //   answers: [
-    //     { id: 1, text: 'Prefer observing from the sidelines' },
-    //     { id: 2, text: 'Enjoy being in the center of attention' },
-    //   ],
-    //   selectedAnswerId: null,
-    // },
+    {
+      id: 4,
+      text: 'In social gatherings, do you prefer being in the center of attention or observe from the sidelines?',
+      answers: [
+        { id: 1, text: 'Prefer observing from the sidelines' },
+        { id: 2, text: 'Enjoy being in the center of attention' },
+      ],
+      selectedAnswerId: null,
+    },
+    {
+      id: 5,
+      text: 'You are taking part in a guided tour of a museum. You:',
+      answers: [
+        {
+          id: 1,
+          text: 'Are a bit too far towards the back so don’t really hear what the guide is saying',
+        },
+        {
+          id: 2,
+          text: 'Are right up the front, adding your own comments in a loud voice',
+        },
+      ],
+      selectedAnswerId: null,
+    },
   ];
 
   constructor() {}
